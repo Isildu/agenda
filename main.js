@@ -60,7 +60,17 @@ function printArray() {
         tbody.innerHTML += fila;
     }
 }
-printArray();
 function agregarContacto(){
-    
+    const contacto = {
+        id: agenda.length + 1,
+        nombre: getElementById('nombre').value,
+        telefono: getElementById('telefono').value,
+        email: getElementById('email').value,
+        empresa: getElementById('empresa').value
+    };
+    agenda.push(contacto);
+    printArray();
+    return contacto;
 }
+
+printArray();
